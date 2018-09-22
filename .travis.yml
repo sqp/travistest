@@ -12,6 +12,9 @@ addons:
     - pulseaudio
     - pulseaudio-utils
 
+services:
+  - pulseaudio
+
 before_install:
   - go get -u -t -v ./...
 
