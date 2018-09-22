@@ -11,21 +11,21 @@ import (
 )
 
 func TestLoadModule(t *testing.T) {
-	isLoaded, e := pulseaudio.ModuleIsLoaded()
-	testFatal(e, "test pulse dbus module is loaded")
+	// isLoaded, e := pulseaudio.ModuleIsLoaded()
+	// testFatal(e, "test pulse dbus module is loaded")
 
-	if isLoaded {
-		coverFailPath(t)
+	// if isLoaded {
+	// 	coverFailPath(t)
 
-		e = pulseaudio.UnloadModule()
-		testFatal(e, "unload pulse dbus module")
+	// 	e = pulseaudio.UnloadModule()
+	// 	testFatal(e, "unload pulse dbus module")
 
-		e = pulseaudio.LoadModule()
-		testFatal(e, "load pulse dbus module")
-		return
-	}
+	// 	e = pulseaudio.LoadModule()
+	// 	testFatal(e, "load pulse dbus module")
+	// 	return
+	// }
 
-	e = pulseaudio.LoadModule()
+	e := pulseaudio.LoadModule()
 	testFatal(e, "load pulse dbus module")
 
 	coverFailPath(t)

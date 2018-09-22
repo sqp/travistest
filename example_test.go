@@ -19,14 +19,14 @@ import (
 func Example() {
 	// Load pulseaudio DBus module if needed. This module is mandatory, but it
 	// can also be configured in system files. See package doc.
-	isLoaded, e := pulseaudio.ModuleIsLoaded()
-	testFatal(e, "test pulse dbus module is loaded")
-	if !isLoaded {
-		e = pulseaudio.LoadModule()
-		testFatal(e, "load pulse dbus module")
+	// isLoaded, e := pulseaudio.ModuleIsLoaded()
+	// testFatal(e, "test pulse dbus module is loaded")
+	// if !isLoaded {
+	e := pulseaudio.LoadModule()
+	testFatal(e, "load pulse dbus module")
 
-		defer pulseaudio.UnloadModule() // has error to test
-	}
+	// 	defer pulseaudio.UnloadModule() // has error to test
+	// }
 
 	// Connect to the pulseaudio dbus service.
 	pulse, e := pulseaudio.New()
