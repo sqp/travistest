@@ -3,7 +3,7 @@ package pulseaudio_test
 import (
 	"github.com/godbus/dbus"
 
-	"github.com/sqp/pulseaudio"
+	"github.com/sqp/travistest"
 
 	"fmt"
 	"log"

@@ -2,7 +2,7 @@ package pulseaudio_test
 
 import (
 	"github.com/godbus/dbus"
-	"github.com/sqp/pulseaudio"
+	"github.com/sqp/travistest"
 
 	"fmt"
 	"log"
@@ -25,7 +25,7 @@ func Example() {
 	e := pulseaudio.LoadModule()
 	testFatal(e, "load pulse dbus module")
 
-	// 	defer pulseaudio.UnloadModule() // has error to test
+	defer pulseaudio.UnloadModule() // has error to test
 	// }
 
 	// Connect to the pulseaudio dbus service.

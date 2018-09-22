@@ -522,13 +522,13 @@ func (hook Hooker) remove(list []interface{}, obj interface{}) []interface{} {
 // LoadModule loads the PulseAudio DBus module.
 //
 func LoadModule() error {
-	return exec.Command("pacmd", "load-module", "module-dbus-protocol").Run()
+	return exec.Command("pactl", "load-module", "module-dbus-protocol").Run()
 }
 
 // UnloadModule unloads the PulseAudio DBus module.
 //
 func UnloadModule() error {
-	return exec.Command("pacmd", "unload-module", "module-dbus-protocol").Run()
+	return exec.Command("pactl", "unload-module", "module-dbus-protocol").Run()
 }
 
 // ModuleIsLoaded tests if the PulseAudio DBus module is loaded.
